@@ -36,15 +36,6 @@
       difftool = {
         prompt = false;
       };
-      pull = {
-        rebase = true;
-      };
-      push = {
-        autoSetupRemote = true;
-      };
-      branch = {
-        autoSetupRebase = "always";
-      };
     };
   };
 }

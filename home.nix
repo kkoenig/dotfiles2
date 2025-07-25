@@ -11,5 +11,6 @@
   home.packages = with pkgs; [
     # Language Servers
     nil # nix
+    alejandra # formatter used by nix language server
   ];
 }

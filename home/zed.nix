@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.zed-editor = {
     enable = true;
 
@@ -28,11 +28,27 @@
           model = "claude-sonnet-4-latest";
         };
       };
+
+      languages = {
+        # https://github.com/zed-extensions/nix
+        Nix = {
+          language_servers = [
+            "nil"
+            "!nixd"
+          ];
+          formatter = {
+            external = {
+              command = "alejandra";
+              arguments = ["--quiet" "--"];
+            };
+          };
+        };
+      };
     };
 
-    # Enable when formatting issue is fixed
-    # extraPackages = with pkgs; [
-    #   nil
-    # ];
+    extraPackages = with pkgs; [
+      nil
+      alejandra
+    ];
   };
 }

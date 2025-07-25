@@ -3,5 +3,5 @@ switch:
 
 check:
 	nix flake check --all-systems
-	nix fmt . -- --check
+	nix fmt . -- --check --quiet
 	nix build .#homeConfigurations.kkoenig.activationPackage
