@@ -8,7 +8,12 @@
 
   programs.home-manager.enable = true;
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
+    # Fonts
+    nerd-fonts.fira-code
+
     # Language Servers
     nil # nix
     alejandra # formatter used by nix language server

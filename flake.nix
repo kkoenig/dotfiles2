@@ -29,6 +29,7 @@
               modules = [
                 ./home.nix
                 ./home/git.nix
+                ./home/ghostty.nix
                 ./home/zed.nix
               ];
             };
