@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
+    catppuccin.url = "github:catppuccin/nix";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -13,6 +14,7 @@
     nixpkgs,
     flake-utils,
     home-manager,
+    catppuccin,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (
@@ -31,6 +33,7 @@
                 ./home/git.nix
                 ./home/ghostty.nix
                 ./home/zed.nix
+                catppuccin.homeModules.catppuccin
               ];
             };
           };

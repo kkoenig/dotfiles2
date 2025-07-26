@@ -10,6 +10,11 @@
 
   fonts.fontconfig.enable = true;
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
   home.packages = with pkgs; [
     # Fonts
     nerd-fonts.fira-code
