@@ -30,8 +30,9 @@
 
               modules = [
                 ./home.nix
-                ./home/git.nix
+                ./home/bat.nix
                 ./home/ghostty.nix
+                ./home/git.nix
                 ./home/zed.nix
                 catppuccin.homeModules.catppuccin
               ];
